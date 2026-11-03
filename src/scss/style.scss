@@ -479,7 +479,7 @@ html {
 .inspiration {
   padding-top: 80px;
   &__wrapper {
-    padding-top: 53px;
+    margin-top: 53px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -494,7 +494,7 @@ html {
     }
 
     @media screen and (max-width: 768px) {
-      padding-top: 43px;
+      margin-top: 43px;
       gap: 20px;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(4, 1fr);
@@ -538,5 +538,50 @@ html {
 
   @media screen and (max-width: 768px) {
     padding-top: 50px;
+  }
+}
+
+// customers
+
+.customers {
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  &__wrapper {
+    margin-top: 53px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    img {
+      width: calc((100% - 90px) / 4);
+      box-shadow: 7px 7px 12px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 50px 0;
+
+    &__wrapper {
+      margin-top: 43px;
+      gap: 20px;
+
+      img {
+        width: calc((100% - 60px) / 4);
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    &__wrapper {
+      margin-top: 33px;
+      justify-content: space-between;
+      column-gap: 36px;
+      row-gap: 20px;
+
+      img {
+        width: calc((100% - 36px) / 2);
+      }
+    }
   }
 }
